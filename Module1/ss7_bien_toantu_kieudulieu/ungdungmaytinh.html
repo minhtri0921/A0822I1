@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="sothunhat" placeholder="Nhập số ">
+<input type="text" id="sothuhai" placeholder="Nhập số "> <br>
+<button onclick="phepcong()">Addition(+)</button>
+<button onclick="pheptru()">Subtraction(-)</button>
+<button onclick="phepnhan()">Multilipcation(X)</button>
+<button onclick="phepchia()">Division(/)</button>
+<form id="demo"></form>
+<script>
+    let so1 = document.getElementById('sothunhat').value;
+    let so2 = document.getElementById('sothuhai').value;
+
+    function phepcong() {
+        let so1 = +document.getElementById('sothunhat').value;
+        let so2 = +document.getElementById('sothuhai').value;
+        document.getElementById('demo').innerHTML="Result : "+(so1+so2);
+    }
+    function pheptru() {
+        let so1 = document.getElementById('sothunhat').value;
+        let so2 = document.getElementById('sothuhai').value;
+        document.getElementById('demo').innerHTML="Result : "+(so1-so2);
+    }
+    function phepnhan() {
+        let so1 = document.getElementById('sothunhat').value;
+        let so2 = document.getElementById('sothuhai').value;
+        document.getElementById('demo').innerHTML="Result : "+(so1*so2);
+    }
+    function phepchia() {
+        let so1 = document.getElementById('sothunhat').value;
+        let so2 = document.getElementById('sothuhai').value;
+        document.getElementById('demo').innerHTML="Result : "+(so1/so2);
+    }
+</script>
+</body>
+</html>
