@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+
+    Amount :<input id="sotien" type="text" name="sotien" value="">
+    From Curentcy :
+    <select id="select1">
+         <option value="A">Việt Nam</option>
+        <option value="B">Mỹ</option>
+    </select>
+    To Curentcy :
+    <select id="select2">
+    <option value="A">Việt Nam</option>
+    <option value="B">Mỹ</option>
+</select>
+    <button onclick="chuyentien()"   style="background-color: purple ;color:white;width: 100px">Convert</button>
+    <p id="alo " style="color: black"></p>
+
+<script>
+    function chuyentien() {
+    let soluong = document.getElementById("sotien").value;
+    let select1 = document.getElementById("select1").value;
+    let select2 = document.getElementById("select2").value;
+
+
+    if (select1 == select2){
+        document.getElementById("alo").innerHTML:"Số tiền"+soluong
+    }
+    if (select1 == "A" && select2 =="B"){
+            document.getElementById("alo").innerHTML:"Số tiền"+soluong/23000
+        }
+    if (select1 =="B" && select2 == "A" ){
+            document.getElementById("alo").innerHTML:"Số tiền"+soluong*23000
+        }
+
+    
+</script>
+</body>
+</html>

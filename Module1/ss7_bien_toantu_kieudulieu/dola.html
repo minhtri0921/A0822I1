@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>UngDungChuyenDoiTienTe</title>
+</head>
+<body>
+Amount : <input type="text" id="soluong">
+Fromcurrency : <select id="select1">
+
+    <option value="A" >Việt Nam Đồng</option>
+    <option value="B" >Đô la mỹ</option>
+</select>
+To Currency : <select id="select2">
+
+    <option value="A" >Việt Nam Đồng</option>
+    <option value="B" >Đô la mỹ</option>
+</select>
+<button onclick="chuyentien()" style="background-color: purple ;color:white;width: 100px">Convert</button>
+<form id="alo"></form>
+<script>
+    function chuyentien() {
+        let soluong=document.getElementById('soluong').value;
+        let select1=document.getElementById('select1').value;
+        let select2=document.getElementById('select2').value;
+
+        if (select1 == select2){
+            document.getElementById("alo").innerHTML="Số tiền: " + soluong}
+        if (select1 == "A" && select2 =="B"){
+            document.getElementById("alo").innerHTML="Số tiền: " + soluong/23000}
+        if (select1 == "B" && select2 == "A"){
+            document.getElementById("alo").innerHTML="Số tiền: " + soluong*23000}
+
+    }
+</script>
+</body>
+</html>
