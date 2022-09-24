@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemKiemTra = prompt("Nhập điểm kiểm tra :");
+    let diemGiuaKy = prompt(" Nhập điểm giữa kỳ : ");
+    let diemCuoiKy = prompt("Nhập điểm cuối kỳ : ")
+    let diemTrungBinh = (diemKiemTra*10+diemGiuaKy*30+diemCuoiKy*60)/100;
+    if (diemTrungBinh >= 8){
+        document.write("Học lực giỏi")
+    }else if (diemTrungBinh >= 6.5){
+        document.write("Học lực khá")
+    }else if (diemTrungBinh >= 5){
+        document.write("Học lực trung bình")
+    }else if (diemTrungBinh < 5){
+        document.write("Học lực yếu")
+    }
+</script>
+</body>
+</html>

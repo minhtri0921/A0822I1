@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTien = +prompt("Nhập số tiền đã vay ban đầu : ")
+    let soThang = +prompt("Nhập số tháng cho vay : ")
+    let laiSuat = +prompt("Nhập lãi suất hàng tháng : ")
+    let  tongTien = soTien*Math.pow(1+laiSuat,soThang)
+    alert("Tổng tiền "+tongTien)
+
+
+</script>
+</body>
+</html>

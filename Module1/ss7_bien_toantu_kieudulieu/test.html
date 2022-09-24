@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  let username = prompt("Bạn là ai ? ");
+  if (username=='Admin'){
+      alert("Nhập mật khẩu : ")
+      let matkhau = prompt("Nhập mật khẩu : ");
+      if (matkhau=='1'){
+          alert("Welcome");
+      }else {
+          alert("Sai mật khẩu")
+      }
+  }else if (username == null){
+      alert("Từ chối đăng nhập")
+  }else {
+      alert("Tôi ko biết bạn")
+  }
+</script>
+</body>
+</html>
