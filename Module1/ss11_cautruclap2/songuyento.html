@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+   let numbers = prompt("Nhập số lượng các số nguyên tố đầu tiên : ")
+   let count = 0 ;
+   let n = 2 ;
+   while (count < numbers){
+       let flag = true ;
+       for (i = 2 ; i <= Math.sqrt(n); i++) {
+           if (n % i === 0) {
+               flag = false;
+           }
+       }
+           if ( flag == true ){
+               document.write( n + ' ')
+               count++;
+           }
+
+       n++;
+   }
+
+
+
+
+</script>
+</body>
+</html>
