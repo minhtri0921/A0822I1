@@ -6,25 +6,15 @@
 </head>
 <body>
 <script>
-    // let number = Number(prompt("N các số nguyên tố đầu tiên: "));
-    // let count = 0;
-    // let n = 2;
-    // while (count < number) {
-    //     let flag = true;
-    //     for (let i = 2; i <= Math.sqrt(n); i++) {
-    //         switch (n%i) {
-    //         case "==0":
-    //             break;
-    //         case "!==":
-    //             count++;
-    //             document.write(n + " ")
-    //         }
-    //     }
-    //     n++;
-    // }
-for (let i = 0 ; i<=100 ; i++){
-    while
-}
+    for (let i = 1; i <= 5; i++) {        //tạo 5 hàng
+        for (let j = 1; j <= i; j++) {    //hàng thứ nhất j=i=1 nên in 1 dấu *
+            document.write("*");    //hàng thứ hai j=1, i=2 nên in 2 dấu *
+        }
+        // for (let k = 1; k <= 5 - i; k++) {  //hàng thứ nhất k=i=1, in 4 dấu cách
+        //     document.write("&ensp;");// in ra 2 khoảng trống (ở đây 1 kí tự = 2 khoảng trống)
+        // }
+        document.write("<br>");
+    }
 </script>
 </body>
 </html>

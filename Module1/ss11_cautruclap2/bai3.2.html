@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập bài số : ")
+    switch (n) {
+        case "1":
+            for (let i = 6; i >= 1; --i) {
+                for (let j = 1; j <= i; ++j) {
+                    document.write(" * ")
+                }
+                document.write("</br>")
+            }
+            break;
+        case "2":
+            for (let i = 1; i < 6; i++) {
+                // tao hang (row) *
+                for (let j = 1; j <= i; ++j) {
+                    document.write(" * ")
+                }
+                document.write("</br>")
+
+            }
+            break;
+        case "3":
+            for (let i = 1; i < 6; i++) {
+                for (let j = 6; j > i; j--) {
+                    document.write("\xa0\xa0");
+                }
+                for (let k = 1; k <= i; k++) {
+                    document.write("*");
+                }
+                document.write('<br>');
+            }
+            break;
+        case "4":
+            for (let i = 1; i < 6; i++) {
+                for (let j = 1; j < i; j++) {
+                    document.write("\xa0\xa0");
+                }
+                for (let k = i; k < 6; k++) {
+                    document.write("*");
+                }
+                document.write('<br>');
+            }
+            break;
+
+    }
+</script>
+</body>
+</html>
