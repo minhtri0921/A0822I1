@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h = prompt("Nhập chiều cao của tam giác cân : ")
+    let m = h ;
+    let n = h ;
+for (let i = 1 ; i <= h ; i++) {
+    for (let j = 1; j <= 2*h-1; j++) {
+        if ( j>=m && j<=n){
+            document.write("*")
+        }else {
+            document.write("\xa0\xa0")
+        }
+        }
+    document.write("</br>")
+    m--;
+    n++;
+    }
+
+</script>
+</body>
+</html>

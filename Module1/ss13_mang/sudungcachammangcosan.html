@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập bài tập số : ")
+    switch (n) {
+        case "1":
+            let myColor = [ "Red " , "Green" , "White" , "Black"];
+            document.write(myColor.toString())
+            break;
+        case "2":
+            const numbers = window.prompt();
+            const arrayString = numbers.toString();
+            const result = [arrayString[0]];
+
+            for (let x = 1 ; x < arrayString.length ; x++)
+            {
+                if ((arrayString[x-1]%2===0) && (arrayString[x]%2===0) ){
+                    result.push('-',arrayString[x]);
+                }
+                else
+                    {
+                    result.push(arrayString[x]);
+                }
+            }
+            console.log(result.join(''));
+            break;
+        case "3":
+            let string = [prompt("Nhập chuỗi ")];
+            let str = string.toString();
+            let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+            let ketQua = [];
+                for ( let i = 0 ; i < str.length ; i++){
+                    if (UPPER.indexOf(str[i]) !== -1)
+                        {
+                        ketQua.push(str[i].toLowerCase())
+                    }
+                    else if (LOWER.indexOf(str[i]) !== -1)
+                        {
+                        ketQua.push(str[i].toUpperCase())
+                    }else
+                        {
+                        ketQua.push(str[i]);
+                    }
+
+                }
+            console.log(ketQua.join(''))
+    }
+</script>
+</body>
+</html>

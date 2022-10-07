@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form></form>
+<input type="text" placeholder="Search " id="word"  onkeydown="search()" >
+<p id="result"></p>
+</form>
+<script>
+    function search() {
+        let arr_tiengAnh = ["table","desk","cap","student","university"]
+        let arr_tiengViet = ["cái bàn"," cái ghế ","cái mũ ","học sinh","đại học"]
+        let key = document.getElementById("word").value
+        let vitri = -1 ;
+        for (let i = 0 ; i<= arr_tiengAnh.length ; i++)
+            if ( key === arr_tiengAnh[i]){
+                vitri = i ;
+                document.getElementById("result").innerText=arr_tiengViet[vitri];
+
+            }
+       if (vitri === -1)
+            {
+                document.getElementById("result").innerText="Không tim thấy"
+            }
+
+
+    }
+</script>
+</body>
+</html>

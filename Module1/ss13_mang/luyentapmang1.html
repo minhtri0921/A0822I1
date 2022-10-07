@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Bài muốn xem : ")
+    switch (n) {
+        case "1":
+            let arr_num = [21, 9, 28, 2, 23, 22, 24, 14, 66, 68]
+            let count = 0;
+            for (let i = 0; i <= arr_num.length - 1; i++) {
+                if (arr_num[i] >= 10) {
+                    count++;
+                }
+            }
+            document.write("Có" + count + "số nguyên lớn hơn hoặc bằng 10")
+            break;
+        case "2":
+            let arr_num2 = [21, 9, 28, 2, 23, 22, 24, 14, 66, 68];
+            let max = 0;
+            for (let i = 0; i <= arr_num2.length - 1; i++) {
+                if (arr_num2[i] > arr_num2[i - 1]) {
+                    max = arr_num2[i];
+                } else {
+                    max = arr_num2[i - 1];
+                }
+            }
+            document.write("Giá trị lớn nhất là " + max)
+            break;
+        case "3":
+            let arr_num3 = [21, 9, 28, 2, 23, 22, 24, 14, 66, 68];
+            let max1 = 0;
+            let sum = 0;
+            for (let i = 1; i <= arr_num3.length - 1; i++) {
+                if (arr_num3[i] > arr_num3[i - 1]) {
+                    max1 = arr_num3[i];
+                } else {
+                    max1 = arr_num3[i - 1];
+                }
+                sum += arr_num3[i]
+            }
+            document.write("Giá trị lớn nhất là " + max1 + "\xa0")
+            document.write("Giá trị trung bình là " + sum / 3)
+            break;
+        case "4":
+            let arr_num4 = [21, 9, 28, 2, 23, 22, 24, 14, 66, 68];
+            for (let i = 0; i < arr_num4.length / 2; i++) {
+                let temp = arr_num4[i];
+                arr_num4[i] = arr_num4[arr_num4.length - 1 - i]
+                arr_num4[arr_num4.length - 1 - i] = temp;
+            }
+            console.log(arr_num4)
+            break;
+        case "5":
+            let arr = Array();
+            let dem = 0;
+            for (let i = 0; i <5 ; i++) {
+                arr[i] = prompt("Nhập phần tử của mảng :")
+                if ( arr[i] < 0){
+                    dem++ ;
+                }
+            }
+            // for (let i = 0; i < 5 ; i++) {
+            //     if ( arr[i] < 0){
+            //         dem++ ;
+            //     }
+            // }
+            document.write(arr)
+            document.write("</br>"+"Có"+ dem +" số nguyên âm ")
+            break;
+        case "6":
+            let soLuong = prompt("Nhập số phần tử của mảng")
+            let arr1 = Array();
+            for (let i = 0; i < soLuong ; i++) {
+                arr1[i] = prompt("Nhập phần tử của mảng :")
+            }
+            let soNguyen = prompt("Nhập số nguyên V :")
+            let flag = true ;
+            for (i = 0 ; i < soLuong ; i++) {
+                if (soNguyen === arr1[i]) {
+                     flag = true;
+                } else {
+                     flag = false;
+                }
+            }
+            if (flag === true){
+                document.write("V is in aray")
+            }else {
+                document.write("V is not in array")
+            }
+            break;
+        case "7":
+            let soLuong1 = prompt("Nhập số phần tử của mảng")
+            let arr2 = Array();
+            for (let i = 0; i < soLuong1 ; i++) {
+                arr2[i] = prompt("Nhập phần tử của mảng :")
+            }
+            let soNguyen1 = prompt("Nhập số nguyên V :")
+            for ( let i = 0 ; i < soLuong1 ; i++) {
+                    if (soNguyen1 === arr2[i]) {
+                        for (let k = i; k < soLuong1; k++) {
+                            arr2[k] = arr2[k + 1]
+                        }
+                        i--;
+                    }
+            }
+            arr2[arr2.length-1]=0
+            console.log(arr2)
+            break;
+        case "8":
+            let arr3 = Array();
+            for (let i = 0; i < 5 ; i++) {
+                arr3[i] = prompt("Nhập phần tử của mảng :")
+            }
+            for (let i = 0; i < arr3.length - 1; i++) {
+                for (let j = i + 1; j < arr3.length; j++) {
+                    if (arr3[j] > arr3[i]) {
+                        let temp = arr3[i];
+                        arr3[i] = arr3[j];
+                        arr3[j] = temp;
+                    }
+                }
+            }
+            console.log(arr3)
+            break;
+        case "9":
+            let arr_a = Array();
+            let arr_b = Array();
+            let arr_c = Array();
+            for (let i = 0; i < 5; i++) {
+                arr_a[i] = prompt("Nhập phần tử của mảng a:")
+            }
+            for (let i = 0 ; i < 5 ; i++){
+                arr_b[i] = prompt("Nhập phần tử của mảng b:")
+            }
+            for ( let i = 0 ; i < 10 ; i++){
+                if ( i >= 0 && i<= 4){
+                    arr_c[i]=arr_b[i];
+                }
+                else {
+                    arr_c[i] = arr_a[i-arr_c.length];
+                }
+            }
+            console.log(arr_c)
+            break;
+    }
+
+
+
+
+</script>
+</body>
+</html>
