@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="b1()">Bài 1</button>
+<button onclick="b2()">Bài 2</button>
+<button onclick="b3()">Bài 3</button>
+<button onclick="b4()">Bài 4</button>
+<button onclick="b5()">Bài 5</button>
+<button onclick="b6()">Bài 6</button>
+<script>
+    function b1() {
+        let a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+        //     for (let i in a){
+        //         console.log("row"+i);
+        //         for ( let j in a[i])
+        //         {
+        //             console.log(" " + a[i][j]);
+        //         }
+        //     }
+        //
+        // }
+        a.map((data, index) => {
+            console.log("row " + index);
+            data.map((item, index) => {
+                console.log(item)
+            })
+        })
+    }
+    function b2() {
+        let arr =  [ 'c', 's', 'c', '2', '6', '1' ] ;
+        for (let i = 0 ; i < arr.length/2 ; i++){
+            let temp = arr[i];
+            arr[i] = arr[arr.length-1-i]
+            arr[arr.length-1-i]= temp ;
+        }
+        console.log(arr.join(""))
+    }
+    function b3() {
+        let amount = prompt("Nhập số phần tử mảng ")
+        let arr = Array;
+        let  count = 0 ;
+        let num = '1,2,3,4,5,6,7,8,9'
+        for (let i = 0; i < amount ; i++) {
+            arr[i] = prompt("Nhập phần tử mảng : ")
+            if ( num.indexOf(arr[i]) !== -1 ){
+                count++
+            }
+        }
+        document.write("Số kí tự số là : "+count)
+        // var remNum = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // var input = +prompt("pick a number" + " ");
+        // var position = input.indexOf(remNum);
+        // alert("this is the index of your input: " + position);
+    }
+    function b4() {
+        let arr_str = prompt("Nhập chuỗi :");
+        let count = 1 ;
+        let space = " ";
+        for (let i = 0 ; i < arr_str.length ; i++){
+            if ( arr_str[i] === space){
+                count ++ ;
+            }
+        }
+        document.write("Có" + count +"từ")
+    }
+    function b5() {
+        let arr1 = prompt("Nhập chuỗi đầu tiên :")
+        let arr2 = prompt("Nhập  chuỗi thứ 2 :")
+            for (let i = 0; i <arr1.length ; i++) {
+            if (arr1[i]===arr2[i]){
+                alert("Hai chuỗi giống nhau")
+            }else {
+                alert("Hai chuỗi khác nhau")
+            }
+        }
+    }
+    function b6() {
+        let arr = prompt("Nhập chuỗi kí tự : ");
+        arr = arr.split("")
+        for (let i= 0 ; i <arr.length ; i++){
+            // arr[i] = prompt("Nhập mảng kí tự :");
+            if (arr[i]==="-"){
+                arr[i]="_"
+            }
+            console.log(arr);
+        }
+    }
+</script>
+</body>
+</html>
