@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = new Array()
+    let n = prompt("Số lượng phần tử mảng :")
+    for (let i = 0; i < n ; i++) {
+        arr[i] = prompt("Nhập phần tử mảng ")
+    }
+    let x = count(arr)
+    function count(arr) {
+        let count = 0 ;
+        let key = prompt("Nhập kí tự bất kì")
+        for ( i = 0 ; i < n ; i++){
+            if (key===arr[i]){
+                count++
+            }
+        }
+        return count;
+    }
+    document.write("Số lần xuất hiện của kí tự : "+x)
+</script>
+</body>
+</html>

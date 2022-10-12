@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n1 = prompt("Nhập n : ")
+    let n2 = prompt("Nhập n : ")
+    let n3 = prompt("Nhập n : ")
+    function min(n1,n2,n3) {
+        let min = 0 ;
+        if ( n1<n2 && n1<n3){
+            min = n1  ;
+        }
+        else if (n2<n3){
+            min = n2 ;
+        }
+        else{
+            min = n3;
+        }
+        document.write("giá trị min = "+min)
+    }
+  min(n1,n2,n3)
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daoNguocMang() {
+        let arr_num = new Array();
+        let n = prompt("Số lượng phần tử mảng :")
+        for (let i = 0 ; i < n ; i++){
+            arr_num[i]=prompt("Nhập phần tử :")
+        }
+        for (let j = 0 ; j < n/2 ; j++){
+            let temp = arr_num [j];
+            arr_num[j] = arr_num[arr_num.length-1-j]
+            arr_num[arr_num.length-1-j]=temp;
+        }
+        console.log(arr_num)
+    }
+    daoNguocMang()
+</script>
+</body>
+</html>
