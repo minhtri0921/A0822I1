@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+<canvas id="DemoCanvas1" width="500" height="600"></canvas>
+<script>
+
+    class Rectangle {
+        constructor(chieuDai,chieuRong) {
+            this.chieuDai = chieuDai ;
+            this.chieuRong = chieuRong;
+        }
+        getChieuRong(){
+            return this.chieuRong ;
+        }
+        setChieuRong(chieuRong){
+            this.chieuRong = chieuRong ;
+        }
+        getChieuDai(){
+            return this.chieuDai ;
+        }
+        setChieuDai(chieuDai){
+            this.chieuDai = chieuDai ;
+        }
+        dienTich(){
+            document.write("Diện tích hình chữ nhật : "+this.chieuDai*this.chieuRong)
+        }
+        chuVi(){
+            document.write("Chu vi hình chữ nhật : "+((this.chieuDai+this.chieuRong)*2))
+        }
+    }
+
+    let hinhChuNhat1 = new Rectangle(5,4);
+    hinhChuNhat1.setChieuDai(50)
+    hinhChuNhat1.setChieuRong(40)
+
+    hinhChuNhat1.dienTich()
+    hinhChuNhat1.chuVi()
+
+
+    let canvas = document.getElementById("DemoCanvas");
+    if (canvas.getContext)
+    {
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle='#fa4b2a';    // color of fill
+        ctx.fillRect(10, 40, hinhChuNhat1.chieuRong, hinhChuNhat1.chieuDai); // create rectangle
+    }
+    hinhChuNhat1.setChieuDai(60)
+    hinhChuNhat1.setChieuRong(50)
+    document.write("Chiều rộng sau khi thay đổi : "+hinhChuNhat1.getChieuRong())
+    document.write("Chiều dài sau khi thay đổi : "+hinhChuNhat1.getChieuDai())
+    hinhChuNhat1.dienTich();
+    let canvas1 = document.getElementById("DemoCanvas1");
+    if (canvas1.getContext)
+    {
+        let ctx = canvas1.getContext('2d');
+        ctx.fillStyle='#fa4ab2';    // color of fill
+        ctx.fillRect(10, 40, hinhChuNhat1.chieuRong, hinhChuNhat1.chieuDai); // create rectangle
+    }
+</script>
+</body>
+</html>

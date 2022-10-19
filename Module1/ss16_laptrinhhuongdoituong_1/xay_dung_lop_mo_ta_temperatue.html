@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class Temperature{
+        constructor(temperatureC) {
+            this.temperatureC = temperatureC ;
+        }
+        changetoF(){
+            document.write("Nhiệt độ F sau chuyển đổi : "+((this.temperatureC*1.8)+32));
+        }
+        changetoK(){
+            document.write("Nhiệt độ K sau chuyển đổi : "+(this.temperatureC+273.15));
+        }
+    }
+    let temperatureC1 = new Temperature(25)
+    temperatureC1.changetoF()
+    temperatureC1.changetoK()
+
+</script>
+</body>
+</html>
