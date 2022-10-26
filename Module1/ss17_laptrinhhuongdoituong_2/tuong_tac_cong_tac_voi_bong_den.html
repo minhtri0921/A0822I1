@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class SwitchButton {
+        constructor(status,lamp) {
+            this.status = status ;
+            this.lamp = null ;
+        }
+        SwitchButton(){
+
+        }
+        connectToLamp(){
+            if (this.status === true ){
+                document.write("đã kết nối với bóng đèn")
+            }else {
+                document.write("Đã ngắt kết nối")
+            }
+        }
+        switchOff(){
+            if (this.status === false){
+                document.write("Switch Off")
+            }
+        }
+        switchOn(button){
+            if (this.status === true){
+                document.write("Switch On")
+            }
+        }
+    }
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status ;
+        }
+        ElectricLamp(){
+
+        }
+        turnOn (){
+            if ( this.status === true){
+                document.write("Đèn đã bật")
+            }
+        }
+        turnOff(){
+            if ( this.status === false){
+                document.write("Đèn đã tắt")
+            }
+        }
+    }
+    let switchButton1 = new SwitchButton();
+    let electricLamp1 = new ElectricLamp();
+    // kết nối công tắc với bóng đèn
+    switchButton1.connectToLamp();
+    // bật công tắc
+    electricLamp1.turnOn();
+    function on() {
+        electricLamp1.turnOns(congtac.switchOn());
+    }
+    function off() {
+        electricLamp1.turnOffs(congtac.switchOff());
+    }
+    function connect() {
+        switchButton1.connectToLamp();
+    }
+    // // bật tắt công tắc 10 lần
+    // for (let i = 0; i < 10 ; i++) {
+    //     if ( i%2 === 0){
+    //         electricLamp1.turnOn()
+    //     }else {
+    //         electricLamp1.turnOff()
+    //     }
+    // }
+</script>
+<button type="button" onclick="on()">Bật đèn</button>
+<button type="button" onclick="off()">Bật đèn</button>
+<button type="button" onclick="connect()">Kết nối</button>
+</body>
+</html>

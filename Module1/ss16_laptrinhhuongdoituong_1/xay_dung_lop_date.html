@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Date {
+        constructor(day , month , year) {
+            this.day = day ;
+            this.month = month ;
+            this.year = year ;
+        }
+        getDay(){
+            return this.day;
+        }
+        getMonth(){
+            return this.month;
+        }
+        getYear(){
+            return this.year;
+        }
+        setDay (day){
+            this.day = day ;
+        }
+        setMonth (month){
+            this.month = month ;
+        }
+        setYear (year){
+            this.year = year ;
+        }
+        toString(){
+            alert(+this.day+"/"+this.month+"/"+this.year)
+        }
+    }
+    let date = new Date(21,9,2001)
+    date.toString()
+    date.setDay(28)
+    date.setMonth(2)
+    date.setYear(2002)
+    date.toString()
+    alert("Ngày sinh nhât : "+date.getDay()+"/"+date.getMonth()+"/"+date.getYear())
+</script>
+</body>
+</html>
